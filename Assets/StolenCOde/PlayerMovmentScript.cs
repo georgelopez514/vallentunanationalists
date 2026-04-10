@@ -26,6 +26,8 @@ public class PlayerMovementScript : MonoBehaviour
     private RaycastHit2D hit_left;
     private RaycastHit2D hit_right;
 
+    public RaycastHit2D hit;
+
     private Vector3 newPosition;
 
     [Space]
@@ -66,7 +68,7 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
     // Checks surroundings and determines which directions the player can move
-    void WallDetector()
+    public void WallDetector()
     {
         // Cast rays in all four directions
         hit_up = Physics2D.Raycast(transform.position, Vector2.up, stepping_Distens);
@@ -81,7 +83,7 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.right * stepping_Distens, Color.red);
     }
 
-    bool IsBlocked(RaycastHit2D hit)
+    bool IsBlocked()
     {
         return hit.collider != null &&
                (hit.collider.CompareTag("wall") || hit.collider.CompareTag("npc"));
@@ -94,37 +96,16 @@ public class PlayerMovementScript : MonoBehaviour
         newPosition = transform.position;
 
         // Move in the input direction if not blocked
-        if (user_Horizontal_Input > 0 && !IsBlocked(hit_right)) newPosition.x += stepping_Distens;
-        else if (user_Horizontal_Input < 0 && !IsBlocked(hit_left)) newPosition.x -= stepping_Distens;
-        else if (user_Vertical_Input > 0 && !IsBlocked(hit_up)) newPosition.y += stepping_Distens;
-        else if (user_Vertical_Input < 0 && !IsBlocked(hit_down)) newPosition.y -= stepping_Distens;
+        if (user_Horizontal_Input > 0 && !IsBlocked()) newPosition.x += stepping_Distens;
+        else if (user_Horizontal_Input < 0 && !IsBlocked()) newPosition.x -= stepping_Distens;
+        else if (user_Vertical_Input > 0 && !IsBlocked()) newPosition.y += stepping_Distens;
+        else if (user_Vertical_Input < 0 && !IsBlocked()) newPosition.y -= stepping_Distens;
 
         if (newPosition != transform.position && !coroutine_Running)
             StartCoroutine(MovementCooldown());
 
-        // Check if the player is adjacent to an NPC
-        bool nextToNPC = (hit_down.collider != null && hit_down.collider.CompareTag("npc")) ||
-                         (hit_left.collider != null && hit_left.collider.CompareTag("npc")) ||
-                         (hit_right.collider != null && hit_right.collider.CompareTag("npc")) ||
-                         (hit_up.collider != null && hit_up.collider.CompareTag("npc"));
+        hit = hit_up.collider.tag;
 
-        player_Next_to_NPC = nextToNPC;
-
-        if (nextToNPC)
-        {
-            Debug.Log("Player found NPC");
-            InteractiveNPC();
-        }
-    }
-
-    // Handles interaction prompt when the player is next to an NPC
-    void InteractiveNPC()
-    {
-        if (user_interact_Input)
-        {
-            Debug.Log("Chatting with NPC...");
-            int_NPC = true;
-        }
     }
 
     // Movement cooldown — prevents the player from moving until the cooldown expires
