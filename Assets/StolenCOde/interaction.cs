@@ -21,6 +21,7 @@ public class Interaction : MonoBehaviour
 
         Debug.Log("[Interaction] interacted");
 
+        bool matched = false;
         foreach (string tag in tags)
         {
             Debug.Log("[Interaction] looking for match");
@@ -29,11 +30,13 @@ public class Interaction : MonoBehaviour
             {
                 Debug.Log("[Interaction] found matching tag: " + tag);
                 EventCaller(tag);
+                matched = true;
                 break;
             }
         }
 
-        Debug.LogWarning("[Interaction] no matching tag found");
+        if (!matched)
+            Debug.LogWarning("[Interaction] no matching tag found");
     }
 
     public string EventCaller(string tag)

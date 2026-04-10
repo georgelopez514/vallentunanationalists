@@ -6,7 +6,6 @@ public class PlayerMovementScript : MonoBehaviour
 {
     float user_Vertical_Input;
     float user_Horizontal_Input;
-    bool user_interact_Input;
 
     private bool user_can_Move = true;
     private bool coroutine_Running = false;
@@ -28,9 +27,9 @@ public class PlayerMovementScript : MonoBehaviour
 
     public RaycastHit2D hit;
 
-    private Vector3 newPosition;
+    private Vector2 facingDirection = Vector2.down;
 
-    [Space]
+    private Vector3 newPosition;
 
     public bool there_is_Monstors;
 
@@ -49,11 +48,13 @@ public class PlayerMovementScript : MonoBehaviour
             PlayerMovement();
         else
             transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movement_Speed);
+
+        hit = Physics2D.Raycast(transform.position, facingDirection, stepping_Distens);
+        Debug.DrawRay(transform.position, facingDirection * stepping_Distens, Color.green);
     }
 
     void PlayerInput()
     {
-        // New Input System equivalents
         Vector2 moveInput = new Vector2(
             (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed ? 1f : 0f) -
             (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed ? 1f : 0f),
@@ -61,32 +62,26 @@ public class PlayerMovementScript : MonoBehaviour
             (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed ? 1f : 0f)
         );
 
-        // Player input
         user_Horizontal_Input = moveInput.x;
         user_Vertical_Input = moveInput.y;
-        user_interact_Input = Keyboard.current.eKey.isPressed;
     }
 
-    // Checks surroundings and determines which directions the player can move
-    public void WallDetector()
+    void WallDetector()
     {
-        // Cast rays in all four directions
         hit_up = Physics2D.Raycast(transform.position, Vector2.up, stepping_Distens);
         hit_down = Physics2D.Raycast(transform.position, Vector2.down, stepping_Distens);
         hit_left = Physics2D.Raycast(transform.position, Vector2.left, stepping_Distens);
         hit_right = Physics2D.Raycast(transform.position, Vector2.right, stepping_Distens);
 
-        // Debug visualisation
         Debug.DrawRay(transform.position, Vector2.up * stepping_Distens, Color.red);
         Debug.DrawRay(transform.position, Vector2.down * stepping_Distens, Color.red);
         Debug.DrawRay(transform.position, Vector2.left * stepping_Distens, Color.red);
         Debug.DrawRay(transform.position, Vector2.right * stepping_Distens, Color.red);
     }
 
-    bool IsBlocked()
+    bool IsWall(RaycastHit2D rawhit)
     {
-        return hit.collider != null &&
-               (hit.collider.CompareTag("wall") || hit.collider.CompareTag("npc"));
+        return rawhit.collider != null && rawhit.collider.CompareTag("wall");
     }
 
     void PlayerMovement()
@@ -95,20 +90,31 @@ public class PlayerMovementScript : MonoBehaviour
 
         newPosition = transform.position;
 
-        // Move in the input direction if not blocked
-        if (user_Horizontal_Input > 0 && !IsBlocked()) newPosition.x += stepping_Distens;
-        else if (user_Horizontal_Input < 0 && !IsBlocked()) newPosition.x -= stepping_Distens;
-        else if (user_Vertical_Input > 0 && !IsBlocked()) newPosition.y += stepping_Distens;
-        else if (user_Vertical_Input < 0 && !IsBlocked()) newPosition.y -= stepping_Distens;
+        if (user_Horizontal_Input > 0 && !IsWall(hit_right))
+        {
+            newPosition.x += stepping_Distens;
+            facingDirection = Vector2.right;
+        }
+        else if (user_Horizontal_Input < 0 && !IsWall(hit_left))
+        {
+            newPosition.x -= stepping_Distens;
+            facingDirection = Vector2.left;
+        }
+        else if (user_Vertical_Input > 0 && !IsWall(hit_up))
+        {
+            newPosition.y += stepping_Distens;
+            facingDirection = Vector2.up;
+        }
+        else if (user_Vertical_Input < 0 && !IsWall(hit_down))
+        {
+            newPosition.y -= stepping_Distens;
+            facingDirection = Vector2.down;
+        }
 
         if (newPosition != transform.position && !coroutine_Running)
             StartCoroutine(MovementCooldown());
-
-        hit = hit_up.collider.tag;
-
     }
 
-    // Movement cooldown — prevents the player from moving until the cooldown expires
     IEnumerator MovementCooldown()
     {
         coroutine_Running = true;
