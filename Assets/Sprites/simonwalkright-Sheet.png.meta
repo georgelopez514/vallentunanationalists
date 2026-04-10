@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: f1b8b58d405482e43bd6cf84fad2e144
+guid: 6cc7ce1e4b88b054f8a1b8e3875dafe7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2439169092766466734
-    second: simoncarles-Sheet-export_0
+      213: 6144951128466094589
+    second: simonwalkright-Sheet_0
   - first:
-      213: -5917322731829438829
-    second: simoncarles-Sheet-export_1
+      213: 4233816588530737198
+    second: simonwalkright-Sheet_1
   - first:
-      213: 1450020952743828489
-    second: simoncarles-Sheet-export_2
+      213: 1837680073116659787
+    second: simonwalkright-Sheet_2
   - first:
-      213: 8832114210846195206
-    second: simoncarles-Sheet-export_3
+      213: -8980409549439031329
+    second: simonwalkright-Sheet_3
   - first:
-      213: 950296532437873472
-    second: simoncarles-Sheet-export_4
+      213: 4240802529161514689
+    second: simonwalkright-Sheet_4
   - first:
-      213: -5009097523062754235
-    second: simoncarles-Sheet-export_5
+      213: -8246325277698521189
+    second: simonwalkright-Sheet_5
   - first:
-      213: -7726094575974783993
-    second: simoncarles-Sheet-export_6
+      213: -8694098790790878941
+    second: simonwalkright-Sheet_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,7 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_0
+      name: simonwalkright-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea20579dd5ba9d120800000000000000
-      internalID: 2439169092766466734
+      spriteID: df97b567e70474550800000000000000
+      internalID: 6144951128466094589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_1
+      name: simonwalkright-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39656f3a35271eda0800000000000000
-      internalID: -5917322731829438829
+      spriteID: e20e78b61c981ca30800000000000000
+      internalID: 4233816588530737198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_2
+      name: simonwalkright-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -177,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90c5b2dbf528f1410800000000000000
-      internalID: 1450020952743828489
+      spriteID: b40bee04a40c08910800000000000000
+      internalID: 1837680073116659787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_3
+      name: simonwalkright-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -199,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60eba298419f19a70800000000000000
-      internalID: 8832114210846195206
+      spriteID: fd72924581d2f5380800000000000000
+      internalID: -8980409549439031329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_4
+      name: simonwalkright-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
@@ -221,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 043be3f49a1203d00800000000000000
-      internalID: 950296532437873472
+      spriteID: 1ce00497e6b5ada30800000000000000
+      internalID: 4240802529161514689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_5
+      name: simonwalkright-Sheet_5
       rect:
         serializedVersion: 2
         x: 320
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5443e84975c1c7ab0800000000000000
-      internalID: -5009097523062754235
+      spriteID: b978470d9da2f8d80800000000000000
+      internalID: -8246325277698521189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: simoncarles-Sheet-export_6
+      name: simonwalkright-Sheet_6
       rect:
         serializedVersion: 2
         x: 384
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70463f1fae567c490800000000000000
-      internalID: -7726094575974783993
+      spriteID: 329a1cc863b585780800000000000000
+      internalID: -8694098790790878941
       vertices: []
       indices: 
       edges: []
@@ -275,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6f607704b410374480369f4521fbe53
+    spriteID: c7a7cdadbf16bc14d84369099ff2c0e7
     internalID: 0
     vertices: []
     indices: 
@@ -287,13 +287,13 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      simoncarles-Sheet-export_0: 2439169092766466734
-      simoncarles-Sheet-export_1: -5917322731829438829
-      simoncarles-Sheet-export_2: 1450020952743828489
-      simoncarles-Sheet-export_3: 8832114210846195206
-      simoncarles-Sheet-export_4: 950296532437873472
-      simoncarles-Sheet-export_5: -5009097523062754235
-      simoncarles-Sheet-export_6: -7726094575974783993
+      simonwalkright-Sheet_0: 6144951128466094589
+      simonwalkright-Sheet_1: 4233816588530737198
+      simonwalkright-Sheet_2: 1837680073116659787
+      simonwalkright-Sheet_3: -8980409549439031329
+      simonwalkright-Sheet_4: 4240802529161514689
+      simonwalkright-Sheet_5: -8246325277698521189
+      simonwalkright-Sheet_6: -8694098790790878941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
