@@ -5,10 +5,6 @@ public class LevelTransitionTrigger : MonoBehaviour
 {
     [SerializeField] private string levelToLoad;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
