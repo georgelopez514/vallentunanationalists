@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 204e5ba0eeaa3ab40b156cd5bd108177
+guid: d6f86c9f422a519459873aac1bf20523
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5856722878705867557
-    second: fallplace_0
+      213: -6879914704195544863
+    second: storarum_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fallplace_0
+      name: storarum_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd465d2729db8bea0800000000000000
-      internalID: -5856722878705867557
+      spriteID: 1e810732702a580a0800000000000000
+      internalID: -6879914704195544863
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fallplace_0: -5856722878705867557
+      storarum_0: -6879914704195544863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 204e5ba0eeaa3ab40b156cd5bd108177
+guid: 544b8c4fd0ca4a7429761a8ccd0b92a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5856722878705867557
-    second: fallplace_0
+      213: 7850816727935697030
+    second: room-export_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fallplace_0
+      name: room-export_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd465d2729db8bea0800000000000000
-      internalID: -5856722878705867557
+      spriteID: 6804d49f734b3fc60800000000000000
+      internalID: 7850816727935697030
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fallplace_0: -5856722878705867557
+      room-export_0: 7850816727935697030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

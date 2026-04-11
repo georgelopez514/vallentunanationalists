@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 204e5ba0eeaa3ab40b156cd5bd108177
+guid: 8a7e9da74aa7f1744835265f39e0789a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5856722878705867557
-    second: fallplace_0
+      213: 2718720322422798441
+    second: kino_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fallplace_0
+      name: kino_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
-        height: 300
+        width: 362
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd465d2729db8bea0800000000000000
-      internalID: -5856722878705867557
+      spriteID: 96875a59ab5dab520800000000000000
+      internalID: 2718720322422798441
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fallplace_0: -5856722878705867557
+      kino_0: 2718720322422798441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
