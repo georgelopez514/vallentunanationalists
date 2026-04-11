@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Interaction : MonoBehaviour
 {
-    public PlayerMovementScript playerMovementScript;
+    [SerializeField] PlayerMovementScript playerMovementScript;
     public string[] tags;
-    public string currentTag; 
+    public string tag;
 
     void Update()
     {
+
         if (playerMovementScript.hit.collider != null)
         {
             Debug.Log("[Interaction] found something");
@@ -28,7 +30,7 @@ public class Interaction : MonoBehaviour
             if (playerMovementScript.hit.collider.CompareTag(taga))
             {
                 Debug.Log("[Interaction] found matching tag: " + taga);
-                currentTag = taga; 
+                tag = taga;
                 EventCaller();
                 matched = true;
                 break;
@@ -41,19 +43,20 @@ public class Interaction : MonoBehaviour
 
     public string EventCaller()
     {
-        if (currentTag == null) 
+        if (tag == null)
         {
             Debug.LogError("[Interaction] failed to find collision");
             return "index error";
         }
 
-        if (currentTag == "npc" && Keyboard.current.eKey.isPressed) 
+        if (tag == "npc" && Keyboard.current.eKey.isPressed)
         {
             Debug.Log("[Interaction] Found an NPC, interacting");
             return "npc";
         }
 
-        Debug.Log($"Interacted with tag: {currentTag}"); 
-        return null; 
+        Debug.Log($"Interacted with tag: {tag}");
+        return tag;
     }
+
 }
