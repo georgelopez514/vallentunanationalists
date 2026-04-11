@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Dialogue
@@ -16,6 +17,13 @@ public class Dialogue
 public class Converashons : MonoBehaviour
 {
     [SerializeField] private Interaction interaction;
+
+    [Space]
+
+    [SerializeField] private string levelToLoad;
+    public bool loadNewScean = false;
+
+    [Space]
 
     [Header("Dialogue Settings")]
     public List<Dialogue> textTriggers = new List<Dialogue>();
@@ -69,9 +77,7 @@ public class Converashons : MonoBehaviour
             interactiveAni(2);
 
         // start dialogue
-        if (!isChatting
-            && interaction.EventCaller() == "npc"
-            && Keyboard.current.eKey.wasPressedThisFrame || interaction.EventCaller() == "eventTrigger")
+        if (!isChatting && interaction.EventCaller() == "npc" && Keyboard.current.eKey.wasPressedThisFrame || interaction.EventCaller() == "eventTrigger")
         {
             StartDialogue();
             return;
@@ -193,6 +199,12 @@ public class Converashons : MonoBehaviour
     IEnumerator CloseWindowAfterDelay()
     {
         yield return new WaitForSeconds(0.34f);
+
+        if (loadNewScean) {
+            DontDestroyOnLoad(gameObject);
+            Debug.Log($"[LevelTransitionTrigger] Loading: {levelToLoad}");
+            SceneManager.LoadScene(levelToLoad);
+        }
 
         npcChattingWindow.SetActive(false);
         pm.not_In_Screen = false;
