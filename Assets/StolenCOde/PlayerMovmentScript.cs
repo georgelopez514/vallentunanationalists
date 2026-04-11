@@ -81,6 +81,7 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.right * stepping_Distens, Color.red);
     }
 
+
     bool IsWall(RaycastHit2D rawhit)
     {
         return rawhit.collider != null && rawhit.collider.CompareTag("wall");
