@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f4198e14ab32ec848b2440f0c964a12a
+guid: 913a3274b88e49542a763dd65557288f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4420781712680604251
-    second: outside_0
+      213: 4058723231555385953
+    second: holefix_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: outside_0
+      name: holefix_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 400
-        height: 300
+        y: 3
+        width: 64
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ad2122647a36a2c0800000000000000
-      internalID: -4420781712680604251
+      spriteID: 16afb7a664b735830800000000000000
+      internalID: 4058723231555385953
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      outside_0: -4420781712680604251
+      holefix_0: 4058723231555385953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
