@@ -8,6 +8,7 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
+
         if (playerMovementScript.hit.collider != null)
         {
             Debug.Log("[Interaction] found something");
@@ -54,4 +55,5 @@ public class Interaction : MonoBehaviour
         Debug.Log($"Interacted with tag: {tag}");
         return tag;
     }
+
 }

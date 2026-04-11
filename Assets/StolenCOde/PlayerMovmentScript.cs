@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementScript : MonoBehaviour
 {
+    public SoundSystem soundSystem;
+
     float user_Vertical_Input;
     float user_Horizontal_Input;
 
@@ -111,8 +113,11 @@ public class PlayerMovementScript : MonoBehaviour
             facingDirection = Vector2.down;
         }
 
-        if (newPosition != transform.position && !coroutine_Running)
+        if (newPosition != transform.position && !coroutine_Running) {
+            soundSystem.activateWalkingSound = true;
             StartCoroutine(MovementCooldown());
+        }
+
     }
 
     IEnumerator MovementCooldown()
