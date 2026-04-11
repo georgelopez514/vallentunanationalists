@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
@@ -53,6 +54,10 @@ public class Interaction : MonoBehaviour
         {
             Debug.Log("[Interaction] Found an NPC, interacting");
             return "npc";
+        }
+
+        if(tag == "eventTrigger"){
+            return "eventTrigger";
         }
 
         Debug.Log($"Interacted with tag: {tag}");

@@ -71,7 +71,7 @@ public class Converashons : MonoBehaviour
         // start dialogue
         if (!isChatting
             && interaction.EventCaller() == "npc"
-            && Keyboard.current.eKey.wasPressedThisFrame)
+            && Keyboard.current.eKey.wasPressedThisFrame || interaction.EventCaller() == "eventTrigger")
         {
             StartDialogue();
             return;
