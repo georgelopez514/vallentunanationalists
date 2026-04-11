@@ -83,14 +83,18 @@ public class PlayerMovementScript : MonoBehaviour
 
     bool IsWall(RaycastHit2D rawhit)
     {
-        return rawhit.collider != null && rawhit.collider.CompareTag("wall");
+        bool result = rawhit.collider != null && rawhit.collider.CompareTag("wall");
+        if (rawhit.collider != null) { 
+         Debug.Log($"Hit: {rawhit.collider.name}, Tag: {rawhit.collider.tag}, IsWall: {result}");
+        }
+        return result;
     }
 
     void PlayerMovement()
     {
         WallDetector();
 
-        newPosition = transform.position;
+        newPosition = transform.position; // already doing this, good
 
         if (user_Horizontal_Input > 0 && !IsWall(hit_right))
         {
@@ -113,11 +117,11 @@ public class PlayerMovementScript : MonoBehaviour
             facingDirection = Vector2.down;
         }
 
-        if (newPosition != transform.position && !coroutine_Running) {
+        if (newPosition != transform.position && !coroutine_Running)
+        {
             soundSystem.activateWalkingSound = true;
             StartCoroutine(MovementCooldown());
         }
-
     }
 
     IEnumerator MovementCooldown()

@@ -129,9 +129,9 @@ GameObject:
   m_Component:
   - component: {fileID: 449117676}
   - component: {fileID: 449117675}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,98 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2143285242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &712130633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712130636}
+  - component: {fileID: 712130635}
+  - component: {fileID: 712130634}
+  m_Layer: 0
+  m_Name: Level trans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &712130634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712130633}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &712130635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712130633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3c5b84ae003bc4096a9f23f328018e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::leveltransitiontriggers
+  levelToLoad: SampleScene
+--- !u!4 &712130636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712130633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.23, y: -5.39, z: 0}
+  m_LocalScale: {x: 39.43, y: 4.02, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848831636
 GameObject:
@@ -357,7 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866392165}
   - component: {fileID: 866392166}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Audio Source (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,8 +578,8 @@ GameObject:
   m_Component:
   - component: {fileID: 969822339}
   - component: {fileID: 969822338}
-  m_Layer: 2
-  m_Name: Audio Source
+  m_Layer: 0
+  m_Name: walking audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -848,9 +940,10 @@ GameObject:
   - component: {fileID: 2143285243}
   - component: {fileID: 2143285245}
   - component: {fileID: 2143285244}
-  m_Layer: 2
+  - component: {fileID: 2143285246}
+  m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,9 +965,9 @@ MonoBehaviour:
   not_In_Screen: 0
   player_Next_to_NPC: 0
   stepping_Distens: 2
-  movement_Speed: 0.1
-  movement_Cooldown: 1
-  there_is_Monstors: 0
+  movement_Speed: 4
+  movement_Cooldown: 0.3
+  there_is_Monstors: 1
 --- !u!114 &2143285241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +990,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143285239}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.8371464, w: 0.5469789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -906,7 +999,7 @@ Transform:
   - {fileID: 969822339}
   - {fileID: 866392165}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 113.68}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2143285243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +1015,7 @@ MonoBehaviour:
   playerMovementScript: {fileID: 2143285240}
   tags:
   - npc
+  currentTag: 
 --- !u!58 &2143285244
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -970,17 +1064,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f78308d153e902459e48049cf94fb1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundSystem
+  interaction: {fileID: 2143285243}
   talkingIndex: 0
   activateAudrio: 0
   activateWalkingSound: 0
-  walkingaudioSource: {fileID: 969822338}
-  audioSource: {fileID: 0}
+  walkingaudioSource: {fileID: 866392166}
+  audioSource: {fileID: 969822338}
   walkingSounds:
   - {fileID: 8300000, guid: d71e069119323be419e246d1a568cef8, type: 3}
   - {fileID: 8300000, guid: 9f6491c7097b66d4da170dcc28a1565a, type: 3}
   - {fileID: 8300000, guid: 6a4579f54a85f5040ac9a2138988a2df, type: 3}
-  talkingSounds: []
+  talkingSounds:
+  - {fileID: 8300000, guid: d36e345dc394982469ebeebe8a6b3f13, type: 3}
+  - {fileID: 8300000, guid: 86d32192bcbc8ee4e947b96d92f0da55, type: 3}
+  - {fileID: 8300000, guid: 2b85568c5ca9ae34c8d93daa4bc05a03, type: 3}
   AudioTriggers: []
+--- !u!50 &2143285246
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143285239}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -989,3 +1114,4 @@ SceneRoots:
   - {fileID: 2143285242}
   - {fileID: 1785812180}
   - {fileID: 2018942378}
+  - {fileID: 712130636}
