@@ -11,5 +11,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2.unity
     guid: 97ef1c775b904ca43b065b59eeb8342b
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: d3631fe01ef12cb45a884292e0da3e22
+  - enabled: 1
+    path: Assets/Scenes/Sovrum.unity
+    guid: 8b50cb46e5bb8c447b5ad449dfd68956
+  - enabled: 1
+    path: Assets/Scenes/outside1.unity
+    guid: c30634143b0241648a347c0d05194161
+  - enabled: 1
+    path: Assets/Scenes/vardagsrum.unity
+    guid: 1bcdb95869ef3bc4abf1dd2725a2db11
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
