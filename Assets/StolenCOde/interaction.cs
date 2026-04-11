@@ -17,8 +17,6 @@ public class Interaction : MonoBehaviour
 
     void ColliderDetector()
     {
-        if (!Keyboard.current.eKey.isPressed) return;
-
         Debug.Log("[Interaction] interacted");
 
         bool matched = false;
@@ -47,7 +45,7 @@ public class Interaction : MonoBehaviour
             return "index error";
         }
 
-        if (tag == "npc")
+        if (tag == "npc" && Keyboard.current.eKey.isPressed)
         {
             Debug.Log("[Interaction] Found an NPC, interacting");
             return "npc";

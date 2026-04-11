@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449117676}
   - component: {fileID: 449117675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,8 @@ GameObject:
   - component: {fileID: 2143285241}
   - component: {fileID: 2143285240}
   - component: {fileID: 2143285243}
-  m_Layer: 0
+  - component: {fileID: 2143285244}
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,13 +608,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d323d58971dfee4ea0cdedf50eee59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementScript
-  steppingDistance: 0
-  movementSpeed: 0
-  movementCooldown: 1
-  interactingWithNPC: 0
-  notOnScreen: 0
-  nextToNPC: 0
-  thereAreMonsters: 0
+  int_NPC: 0
+  not_In_Screen: 0
+  player_Next_to_NPC: 0
+  stepping_Distens: 2
+  movement_Speed: 0.1
+  movement_Cooldown: 1
+  there_is_Monstors: 0
 --- !u!114 &2143285241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ad0d3cbe3d6ff4bb8b9389c457cb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovementScript
-  player_Pos: {fileID: 449117676}
+  player_Pos: {fileID: 2143285242}
   movement_Speed: 1
 --- !u!4 &2143285242
 Transform:
@@ -636,14 +637,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143285239}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8371464, w: 0.5469789}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 449117676}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 113.68}
 --- !u!114 &2143285243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,9 +657,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca87c812f5ff2a84f9c665bb90336050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interaction
-  player: {fileID: 2143285240}
-  interactableTags:
+  playerMovementScript: {fileID: 2143285240}
+  tags:
   - npc
+--- !u!58 &2143285244
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143285239}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
