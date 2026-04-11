@@ -83,11 +83,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     bool IsWall(RaycastHit2D rawhit)
     {
-        bool result = rawhit.collider != null && rawhit.collider.CompareTag("wall");
-        if (rawhit.collider != null) { 
-         Debug.Log($"Hit: {rawhit.collider.name}, Tag: {rawhit.collider.tag}, IsWall: {result}");
-        }
-        return result;
+        return rawhit.collider != null && rawhit.collider.CompareTag("wall");
     }
 
     void PlayerMovement()
