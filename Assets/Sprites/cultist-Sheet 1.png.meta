@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 9f2c000ce5bb87048b5fff4ad2994d19
+guid: 56abd4e29df7bf2458d3fd0e0212490d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6035128246470810164
-    second: cultist-Sheet_0
+      213: 4295644547449274570
+    second: cultist-Sheet 1_0
   - first:
-      213: -1328680961265053929
-    second: cultist-Sheet_1
+      213: -5811267918464914344
+    second: cultist-Sheet 1_1
   - first:
-      213: -1308854144606585331
-    second: cultist-Sheet_2
+      213: -8150047297783180958
+    second: cultist-Sheet 1_2
   - first:
-      213: -6999863018509566937
-    second: cultist-Sheet_3
+      213: -7407374886070499239
+    second: cultist-Sheet 1_3
+  - first:
+      213: 2162180548776689063
+    second: cultist-Sheet 1_4
+  - first:
+      213: 960126288812319590
+    second: cultist-Sheet 1_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cultist-Sheet_0
+      name: cultist-Sheet 1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 15
         y: 0
-        width: 64
-        height: 64
+        width: 30
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43a91d82a2511c350800000000000000
-      internalID: 6035128246470810164
+      spriteID: ac0ce04e4f13d9b30800000000000000
+      internalID: 4295644547449274570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cultist-Sheet_1
+      name: cultist-Sheet 1_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 79
         y: 0
-        width: 64
-        height: 64
+        width: 30
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71fc8f394b39f8de0800000000000000
-      internalID: -1328680961265053929
+      spriteID: 85c66491e9a3a5fa0800000000000000
+      internalID: -5811267918464914344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cultist-Sheet_2
+      name: cultist-Sheet 1_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 143
         y: 0
-        width: 64
-        height: 64
+        width: 30
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0e3def071406dde0800000000000000
-      internalID: -1308854144606585331
+      spriteID: 2615009d92735ee80800000000000000
+      internalID: -8150047297783180958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cultist-Sheet_3
+      name: cultist-Sheet 1_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 202
         y: 0
-        width: 64
-        height: 64
+        width: 35
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72cf759ebad7bde90800000000000000
-      internalID: -6999863018509566937
+      spriteID: 9584e9d79c7b33990800000000000000
+      internalID: -7407374886070499239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cultist-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7adf71ed0cb910e10800000000000000
+      internalID: 2162180548776689063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cultist-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6632c20d5cd035d00800000000000000
+      internalID: 960126288812319590
       vertices: []
       indices: 
       edges: []
@@ -200,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0a02f4f204d434d4491b7a93dd676d52
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +258,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      cultist-Sheet_0: 6035128246470810164
-      cultist-Sheet_1: -1328680961265053929
-      cultist-Sheet_2: -1308854144606585331
-      cultist-Sheet_3: -6999863018509566937
+      cultist-Sheet 1_0: 4295644547449274570
+      cultist-Sheet 1_1: -5811267918464914344
+      cultist-Sheet 1_2: -8150047297783180958
+      cultist-Sheet 1_3: -7407374886070499239
+      cultist-Sheet 1_4: 2162180548776689063
+      cultist-Sheet 1_5: 960126288812319590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/vardagsrum.unity
     guid: 1bcdb95869ef3bc4abf1dd2725a2db11
+  - enabled: 1
+    path: Assets/Scenes/Underground1.unity
+    guid: 050878b238ce2de4f9f3688e595d25fa
+  - enabled: 1
+    path: Assets/Scenes/Tortureroom.unity
+    guid: 8120b20023eaa4e49b70a7677a5d62cf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
