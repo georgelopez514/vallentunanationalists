@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tortureroom.unity
     guid: 8120b20023eaa4e49b70a7677a5d62cf
+  - enabled: 1
+    path: Assets/Scenes/back.unity
+    guid: 112cb841284dd5645990c401a719fdda
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
