@@ -942,7 +942,7 @@ MonoBehaviour:
   playerMovementScript: {fileID: 820244748}
   tags:
   - npc
-  currentTag: 
+  tag: 
 --- !u!114 &820244748
 MonoBehaviour:
   m_ObjectHideFlags: 0
