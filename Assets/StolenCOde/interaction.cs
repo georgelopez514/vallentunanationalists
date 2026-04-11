@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Interaction : MonoBehaviour
 {
     [SerializeField] PlayerMovementScript playerMovementScript;
     public string[] tags;
+    public string tag;
 
     void Update()
     {
@@ -21,14 +23,15 @@ public class Interaction : MonoBehaviour
         Debug.Log("[Interaction] interacted");
 
         bool matched = false;
-        foreach (string tag in tags)
+        foreach (string taga in tags)
         {
             Debug.Log("[Interaction] looking for match");
 
-            if (playerMovementScript.hit.collider.CompareTag(tag))
+            if (playerMovementScript.hit.collider.CompareTag(taga))
             {
-                Debug.Log("[Interaction] found matching tag: " + tag);
-                EventCaller(tag);
+                Debug.Log("[Interaction] found matching tag: " + taga);
+                tag = taga;
+                EventCaller();
                 matched = true;
                 break;
             }
@@ -38,7 +41,7 @@ public class Interaction : MonoBehaviour
             Debug.LogWarning("[Interaction] no matching tag found");
     }
 
-    public string EventCaller(string tag)
+    public string EventCaller()
     {
         if (tag == null)
         {

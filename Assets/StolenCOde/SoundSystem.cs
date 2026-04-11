@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
+    Interaction interaction;
+
+    public int talkingIndex;
     public bool activateAudrio;
     public bool activateWalkingSound;
     public AudioSource walkingaudioSource;
@@ -12,6 +15,8 @@ public class SoundSystem : MonoBehaviour
 
     private void Awake()
     {
+        talkingIndex = 0;
+
         // Check if audioSystem is assigned
         if (walkingaudioSource == null && audioSource == null)
         {
@@ -28,8 +33,27 @@ public class SoundSystem : MonoBehaviour
     private void Update()
     {
         walkingAudio();
+        if (interaction.EventCaller() == "npc")
+        {
+            Debug.Log("[SoundSystem] talking...");
+            npctalking();
+        }
     }
 
+    public void npctalking()
+    {
+        if (activateAudrio)
+        {
+            audioSource.clip = null; // prevents overlapping
+            audioSource.clip = talkingSounds[talkingIndex];
+            walkingaudioSource.Play();
+        }
+
+        if (talkingIndex > talkingSounds.Length)
+        {
+            talkingIndex = 0;
+        }
+    }
     public void walkingAudio()
     {
         if (activateWalkingSound == true) {
