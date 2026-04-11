@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SoundSystem : MonoBehaviour
 {
-    Interaction interaction;
+    public Interaction interaction;
 
     public int talkingIndex;
     public bool activateAudrio;
@@ -17,25 +17,26 @@ public class SoundSystem : MonoBehaviour
     {
         talkingIndex = 0;
 
-        // Check if audioSystem is assigned
         if (walkingaudioSource == null && audioSource == null)
         {
-            Debug.LogError("AudioSource not assigned in the Inspector."); // Log an error if AudioSource is not assigned
+            Debug.LogError("AudioSource not assigned in the Inspector.");
         }
 
-        // Optionally assign the audioClip to the audioSystem if not done in the Inspector
         if (walkingaudioSource != null && audioSource != null && walkingSounds != null)
         {
-            walkingaudioSource.clip = walkingSounds[1]; // Assign the audio clip to the audio source
+            walkingaudioSource.clip = walkingSounds[1];
         }
     }
 
     private void Update()
     {
         walkingAudio();
-        if (interaction.EventCaller() == "npc")
+        Debug.Log("[SoundSystem] interaction.EventCaller()");
+
+        if (interaction.EventCaller() == "npc" && !audioSource.isPlaying)
         {
             Debug.Log("[SoundSystem] talking...");
+            activateAudrio = true;
             npctalking();
         }
     }
@@ -44,21 +45,25 @@ public class SoundSystem : MonoBehaviour
     {
         if (activateAudrio)
         {
-            audioSource.clip = null; // prevents overlapping
             audioSource.clip = talkingSounds[talkingIndex];
-            walkingaudioSource.Play();
-        }
+            audioSource.Play(); 
+            activateAudrio = false;
 
-        if (talkingIndex > talkingSounds.Length)
-        {
-            talkingIndex = 0;
+            talkingIndex++; 
+
+            if (talkingIndex >= talkingSounds.Length) 
+            {
+                talkingIndex = 0;
+            }
         }
     }
+
     public void walkingAudio()
     {
-        if (activateWalkingSound == true) {
-            walkingaudioSource.clip = null; // prevents overlapping
-            walkingaudioSource.clip = walkingSounds[Random.Range(0, walkingSounds.Length)]; // plays audio
+        if (activateWalkingSound == true)
+        {
+            walkingaudioSource.clip = null;
+            walkingaudioSource.clip = walkingSounds[Random.Range(0, walkingSounds.Length)];
             walkingaudioSource.Play();
             activateWalkingSound = false;
         }
