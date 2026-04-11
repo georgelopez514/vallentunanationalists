@@ -6,6 +6,11 @@ public class PlayerMovementScript : MonoBehaviour
 {
     public SoundSystem soundSystem;
 
+    [SerializeField] private Animator animator;
+
+    private float aniMovmentX;
+    private float aniMovmentY;
+
     float user_Vertical_Input;
     float user_Horizontal_Input;
 
@@ -38,6 +43,7 @@ public class PlayerMovementScript : MonoBehaviour
     private void Awake()
     {
         player_Next_to_NPC = false;
+        animator = GetComponent<Animator>(); // FIX: was never assigned, caused NullReferenceException
     }
 
     void Update()
@@ -81,7 +87,6 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.right * stepping_Distens, Color.red);
     }
 
-
     bool IsWall(RaycastHit2D rawhit)
     {
         return rawhit.collider != null && rawhit.collider.CompareTag("wall");
@@ -91,27 +96,31 @@ public class PlayerMovementScript : MonoBehaviour
     {
         WallDetector();
 
-        newPosition = transform.position; // already doing this, good
+        newPosition = transform.position;
 
         if (user_Horizontal_Input > 0 && !IsWall(hit_right))
         {
             newPosition.x += stepping_Distens;
             facingDirection = Vector2.right;
+            animatorValues(0, -1); // blend tree: walk right = X:-1, Y:0
         }
         else if (user_Horizontal_Input < 0 && !IsWall(hit_left))
         {
             newPosition.x -= stepping_Distens;
             facingDirection = Vector2.left;
+            animatorValues(0, 1); // blend tree: walk left = X:1, Y:0
         }
         else if (user_Vertical_Input > 0 && !IsWall(hit_up))
         {
             newPosition.y += stepping_Distens;
             facingDirection = Vector2.up;
+            animatorValues(-1, 0); // blend tree: walk up = X:0, Y:-1
         }
         else if (user_Vertical_Input < 0 && !IsWall(hit_down))
         {
             newPosition.y -= stepping_Distens;
             facingDirection = Vector2.down;
+            animatorValues(1, 0); // blend tree: walk down = X:0, Y:1
         }
 
         if (newPosition != transform.position && !coroutine_Running)
@@ -119,6 +128,12 @@ public class PlayerMovementScript : MonoBehaviour
             soundSystem.activateWalkingSound = true;
             StartCoroutine(MovementCooldown());
         }
+    }
+
+    void animatorValues(int y, int x)
+    {
+        animator.SetFloat("X", x);
+        animator.SetFloat("Y", y);
     }
 
     IEnumerator MovementCooldown()
@@ -130,5 +145,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         user_can_Move = true;
         coroutine_Running = false;
+        animator.SetFloat("Y", 0);
+        animator.SetFloat("X", 0);
     }
 }
