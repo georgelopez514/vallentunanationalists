@@ -356,7 +356,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: talkingSounds.Array.size
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: 'talkingSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a9619fea41efd84b80fcdb532f9849d, type: 3}
+    - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: 'talkingSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: 'talkingSounds.Array.data[2]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5582990505593434930, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_Layer
@@ -1129,6 +1141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTransitionTrigger
   levelToLoad: fall
+  killthemusic: 0
+  musicObjectName: djmusic
 --- !u!61 &458782814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1282,6 +1296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTransitionTrigger
   levelToLoad: vardagsrum
+  killthemusic: 0
+  musicObjectName: djmusic
 --- !u!1 &561310991
 GameObject:
   m_ObjectHideFlags: 0
