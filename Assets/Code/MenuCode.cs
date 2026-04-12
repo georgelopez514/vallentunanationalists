@@ -1,16 +1,20 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuCode : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public string momba;
+
+    public void StartGame()
     {
-        
+        Debug.Log("Start button clicked!");
+        SceneManager.LoadScene(momba); // Replace with your scene name
     }
 
-    // Update is called once per frame
-    void Update()
+    // Method for quitting the game
+    public void QuitGame()
     {
-        
+        Debug.Log("Quit button clicked!");
+        Application.Quit();
     }
 }

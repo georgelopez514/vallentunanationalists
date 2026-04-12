@@ -87,36 +87,32 @@ public class PlayerMovementScript : MonoBehaviour
         Debug.DrawRay(transform.position, Vector2.right * stepping_Distens, Color.red);
     }
 
-    bool IsWall(RaycastHit2D rawhit)
-    {
-        return rawhit.collider != null && rawhit.collider.CompareTag("wall");
-    }
-
     void PlayerMovement()
     {
         WallDetector();
 
         newPosition = transform.position;
 
-        if (user_Horizontal_Input > 0 && !IsWall(hit_right))
+        if (user_Horizontal_Input > 0 && (hit_right.collider == null || !hit_right.collider.CompareTag("wall")))
         {
             newPosition.x += stepping_Distens;
             facingDirection = Vector2.right;
             animatorValues(0, -1); // blend tree: walk right = X:-1, Y:0
         }
-        else if (user_Horizontal_Input < 0 && !IsWall(hit_left))
+        // LEFT movement checks hit_right — should be hit_left
+        else if (user_Horizontal_Input < 0 && (hit_left.collider == null || !hit_left.collider.CompareTag("wall")))
         {
             newPosition.x -= stepping_Distens;
             facingDirection = Vector2.left;
             animatorValues(0, 1); // blend tree: walk left = X:1, Y:0
         }
-        else if (user_Vertical_Input > 0 && !IsWall(hit_up))
+        else if (user_Vertical_Input > 0 && (hit_up.collider == null || !hit_up.collider.CompareTag("wall")))
         {
             newPosition.y += stepping_Distens;
             facingDirection = Vector2.up;
             animatorValues(-1, 0); // blend tree: walk up = X:0, Y:-1
         }
-        else if (user_Vertical_Input < 0 && !IsWall(hit_down))
+        else if (user_Vertical_Input < 0 && (hit_down.collider == null || !hit_down.collider.CompareTag("wall")))
         {
             newPosition.y -= stepping_Distens;
             facingDirection = Vector2.down;

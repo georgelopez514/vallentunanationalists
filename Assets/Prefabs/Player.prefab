@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682829590897394164}
   - component: {fileID: 3276425156383890957}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: walking audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 200461911384101737}
   - component: {fileID: 4668074217207128076}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Audio Source (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 4532378709624081550}
   - component: {fileID: 7907068957152443277}
   - component: {fileID: 7850563729115702524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
