@@ -201,7 +201,6 @@ public class Converashons : MonoBehaviour
         yield return new WaitForSeconds(0.34f);
 
         if (loadNewScean) {
-            DontDestroyOnLoad(gameObject);
             Debug.Log($"[LevelTransitionTrigger] Loading: {levelToLoad}");
             SceneManager.LoadScene(levelToLoad);
         }

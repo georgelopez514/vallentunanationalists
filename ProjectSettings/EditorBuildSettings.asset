@@ -26,11 +26,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Underground1.unity
     guid: 050878b238ce2de4f9f3688e595d25fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tortureroom.unity
     guid: 8120b20023eaa4e49b70a7677a5d62cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/back.unity
     guid: 112cb841284dd5645990c401a719fdda
+  - enabled: 1
+    path: Assets/Scenes/fallcutscene.unity
+    guid: 548dfcedc70858e44aa58ad2fe6cd304
+  - enabled: 1
+    path: Assets/Scenes/StabCutscene.unity
+    guid: 84679a8364d35004bbc5d0ceda2ebbed
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: 3465d3507ac84184a9c2f733b4b4e6c8
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: db34f384cf7491e428ddf6bc66fe9ad1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

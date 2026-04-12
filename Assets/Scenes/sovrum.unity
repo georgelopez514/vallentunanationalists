@@ -1542,6 +1542,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1532786583200554032, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: tag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532786583200554032, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: tags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1532786583200554032, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: 'tags.Array.data[1]'
+      value: eventTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105530740597273511, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: m_Radius
+      value: 0.33664986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105530740597273511, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0046670837
+      objectReference: {fileID: 0}
     - target: {fileID: 7850563729115702524, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
