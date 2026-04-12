@@ -1018,6 +1018,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTransitionTrigger
   levelToLoad: Sovrum
+  killthemusic: 0
+  musicObjectName: djmusic
 --- !u!61 &1069524928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1110,6 +1112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelTransitionTrigger
   levelToLoad: outside1
+  killthemusic: 0
+  musicObjectName: djmusic
 --- !u!61 &1106891082
 BoxCollider2D:
   m_ObjectHideFlags: 0
