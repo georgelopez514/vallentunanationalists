@@ -1307,11 +1307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d323d58971dfee4ea0cdedf50eee59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementScript
---- !u!82 &1343789494 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4668074217207128076, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
-  m_PrefabInstance: {fileID: 1343789490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1353194150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,8 +1400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Converashons
   interaction: {fileID: 1343789492}
-  audioSource: {fileID: 1343789494}
-  activateAudrio: 1
+  audioSource: {fileID: 0}
+  activateAudrio: 0
   levelToLoad: 
   loadNewScean: 0
   textTriggers:

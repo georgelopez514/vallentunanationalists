@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Dialogue
 {
+
     [SerializeField] public TMP_Text textDisplay;
     [SerializeField] public string customString = "Your custom text here!";
     [SerializeField] public GameObject npcArt;
     [SerializeField] public float letterDelay = 0.05f;
+    [SerializeField] public AudioClip talkingSounds;
 }
 
 public class Converashons : MonoBehaviour
 {
     [SerializeField] private Interaction interaction;
-
+    [SerializeField] public AudioSource audioSource;
+                     public bool activateAudrio;
     [Space]
 
     [SerializeField] private string levelToLoad;
@@ -66,6 +70,10 @@ public class Converashons : MonoBehaviour
 
         if (pm == null)
             pm = Object.FindObjectOfType<PlayerMovementScript>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource not assigned in the Inspector.");
+        }
     }
 
     void Update()
@@ -128,6 +136,7 @@ public class Converashons : MonoBehaviour
         {
             Dialogue dialogue = textTriggers[currentDialogueIndex];
             SpawnNpcArt(dialogue.npcArt);
+            npctalking(dialogue);
 
             if (typingCoroutine != null)
                 StopCoroutine(typingCoroutine);
@@ -194,6 +203,16 @@ public class Converashons : MonoBehaviour
     void EndDialogue()
     {
         StartCoroutine(CloseWindowAfterDelay());
+    }
+
+    // WITH this:
+    public void npctalking(Dialogue dialogue)
+    {
+        if (dialogue.talkingSounds != null)
+        {
+            audioSource.clip = dialogue.talkingSounds;
+            audioSource.Play();
+        }
     }
 
     IEnumerator CloseWindowAfterDelay()
