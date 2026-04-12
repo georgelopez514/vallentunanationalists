@@ -906,8 +906,8 @@ Transform:
   m_GameObject: {fileID: 1018052718}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1670399, y: 2.27196, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.59, y: 1.49, z: 0}
+  m_LocalScale: {x: 1.4338, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1353194152}
@@ -946,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 676.45, y: -85.315}
+  m_AnchoredPosition: {x: 1203, y: -85.315}
   m_SizeDelta: {x: 325.08, y: 289.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066822503
@@ -1179,6 +1179,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1532786583200554032, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: tag
+      value: npc
+      objectReference: {fileID: 0}
     - target: {fileID: 3139120177432172395, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -1194,6 +1198,10 @@ PrefabInstance:
     - target: {fileID: 3139120177432172395, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+      propertyPath: talkingSounds.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6105530740597273511, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_Radius
@@ -1308,7 +1316,7 @@ GameObject:
   - component: {fileID: 1353194153}
   m_Layer: 0
   m_Name: npc
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,7 +1355,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.3053707, y: 0.84032434}
+  m_Offset: {x: 1.3053707, y: 0.5285728}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1357,7 +1365,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4996407, y: 4.149214}
+  m_Size: {x: 3.4996407, y: 4.772717}
   m_EdgeRadius: 0
 --- !u!4 &1353194152
 Transform:
