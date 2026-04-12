@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneOnTimer
   changeTime: 4
-  sceneName: Underground1
+  sceneName: StabCutscene
 --- !u!4 &470762994
 Transform:
   m_ObjectHideFlags: 0
