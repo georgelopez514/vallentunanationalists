@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/fall.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Menu.unity
+    guid: db34f384cf7491e428ddf6bc66fe9ad1
   - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: d3631fe01ef12cb45a884292e0da3e22
@@ -15,23 +15,17 @@ EditorBuildSettings:
     path: Assets/2.unity
     guid: 97ef1c775b904ca43b065b59eeb8342b
   - enabled: 1
-    path: Assets/Scenes/Sovrum.unity
+    path: Assets/Scenes/sovrum.unity
     guid: 8b50cb46e5bb8c447b5ad449dfd68956
-  - enabled: 1
-    path: Assets/Scenes/outside1.unity
-    guid: c30634143b0241648a347c0d05194161
   - enabled: 1
     path: Assets/Scenes/vardagsrum.unity
     guid: 1bcdb95869ef3bc4abf1dd2725a2db11
   - enabled: 1
-    path: Assets/Scenes/Underground1.unity
-    guid: 050878b238ce2de4f9f3688e595d25fa
-  - enabled: 0
-    path: Assets/Scenes/Tortureroom.unity
-    guid: 8120b20023eaa4e49b70a7677a5d62cf
-  - enabled: 0
-    path: Assets/Scenes/back.unity
-    guid: 112cb841284dd5645990c401a719fdda
+    path: Assets/Scenes/outside1.unity
+    guid: c30634143b0241648a347c0d05194161
+  - enabled: 1
+    path: Assets/Scenes/fall.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/fallcutscene.unity
     guid: 548dfcedc70858e44aa58ad2fe6cd304
@@ -41,8 +35,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/end.unity
     guid: 3465d3507ac84184a9c2f733b4b4e6c8
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: db34f384cf7491e428ddf6bc66fe9ad1
+  - enabled: 0
+    path: Assets/Scenes/Underground1.unity
+    guid: 050878b238ce2de4f9f3688e595d25fa
+  - enabled: 0
+    path: Assets/Scenes/Tortureroom.unity
+    guid: 8120b20023eaa4e49b70a7677a5d62cf
+  - enabled: 0
+    path: Assets/Scenes/back.unity
+    guid: 112cb841284dd5645990c401a719fdda
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

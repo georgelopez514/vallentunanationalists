@@ -356,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: talkingSounds.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: 'talkingSounds.Array.data[0]'
@@ -369,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 4844300220649811074, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: 'talkingSounds.Array.data[2]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: aff57656e9d9c1946bd4cb5f0d92f889, type: 3}
     - target: {fileID: 5582990505593434930, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -842,30 +842,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Converashons
   interaction: {fileID: 412876822}
+  audioSource: {fileID: 1205138028}
+  activateAudrio: 1
   levelToLoad: 
   loadNewScean: 0
   textTriggers:
   - textDisplay: {fileID: 1808422818}
     customString: "\u201CHey you wanna know something?\u201D"
     npcArt: {fileID: 2135388737}
-    letterDelay: 0
+    letterDelay: 0.05
+    talkingSounds: {fileID: 8300000, guid: 5a9619fea41efd84b80fcdb532f9849d, type: 3}
   - textDisplay: {fileID: 1808422818}
     customString: "\u201CNot really, I don\u2019t know you.\u201D"
     npcArt: {fileID: 2036019021}
     letterDelay: 0
+    talkingSounds: {fileID: 8300000, guid: 784e4992430922f46bb0ff5c2973cf4e, type: 3}
   - textDisplay: {fileID: 1808422818}
     customString: "\u201CJust letting you know there\u2019s been a lot of HORSES
       around recently\u2026\u201D"
     npcArt: {fileID: 2135388737}
     letterDelay: 0
+    talkingSounds: {fileID: 8300000, guid: aff57656e9d9c1946bd4cb5f0d92f889, type: 3}
   - textDisplay: {fileID: 1808422818}
     customString: "\u201C...\u201D"
     npcArt: {fileID: 2036019021}
     letterDelay: 0
+    talkingSounds: {fileID: 0}
   - textDisplay: {fileID: 1808422818}
     customString: "\u201CWhat the fuck does that mean?\u201D"
     npcArt: {fileID: 2036019021}
     letterDelay: 0
+    talkingSounds: {fileID: 8300000, guid: 87971fcc2b3ddc548a766082a27749cd, type: 3}
   npcChattingWindow: {fileID: 190969611}
   npcArtSpawnParent: {fileID: 2135388738}
   spriteRendererIntIcon: {fileID: 261422493}
@@ -1637,6 +1644,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1205138028 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4668074217207128076, guid: f07ccea320b88b541a957f40bd8a1c0e, type: 3}
+  m_PrefabInstance: {fileID: 78662839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1243259156
 GameObject:
   m_ObjectHideFlags: 0
