@@ -1417,21 +1417,20 @@ MonoBehaviour:
     letterDelay: 0
     talkingSounds: {fileID: 8300000, guid: 26255b0a179128b4bb480a283fad4b32, type: 3}
   - textDisplay: {fileID: 143919146}
-    customString: "\u201CYeah, I really need some fresh air, I\u2019ll be quick about
-      it though\u201D"
+    customString: "\u201CYou don\u2019t understand, I REALLY need to go outside\u201D"
     npcArt: {fileID: 1066822501}
     letterDelay: 0
-    talkingSounds: {fileID: 0}
+    talkingSounds: {fileID: 8300000, guid: a426796e9cdc5e143924d2a04b034a87, type: 3}
   - textDisplay: {fileID: 143919146}
     customString: "\u201CAlright, you\u2019re old enough to make your own decisions\u201D"
     npcArt: {fileID: 1847572088}
     letterDelay: 0
     talkingSounds: {fileID: 8300000, guid: 757735cb2aa2c0243974b5c2ffbb285d, type: 3}
   - textDisplay: {fileID: 143919146}
-    customString: "\u201CNot old enough to buy alcohol though\u2026\u201D"
+    customString: "\u201CYeah, I\u2019m a big boy\u201D"
     npcArt: {fileID: 1066822501}
     letterDelay: 0
-    talkingSounds: {fileID: 0}
+    talkingSounds: {fileID: 8300000, guid: 03e9e104d5e48f544a1a7210c21ba050, type: 3}
   npcChattingWindow: {fileID: 1683097965}
   npcArtSpawnParent: {fileID: 1847572089}
   spriteRendererIntIcon: {fileID: 0}
