@@ -843,7 +843,7 @@ MonoBehaviour:
     letterDelay: 0
   - textDisplay: {fileID: 1808422818}
     customString: "\u201CJust letting you know there\u2019s been a lot of HORSES
-      around recently, and you know what that means\u2026\u201D"
+      around recently\u2026\u201D"
     npcArt: {fileID: 2135388737}
     letterDelay: 0
   - textDisplay: {fileID: 1808422818}
